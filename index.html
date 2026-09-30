@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiran Academy | Learn. Build. Grow.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>KIRAN</span> ACADEMY
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO KIRAN ACADEMY</p>
+
+            <h1>
+                Learn Today.
+                <span>Build Tomorrow.</span>
+            </h1>
+
+            <p class="hero-text">
+                Upgrade your technical skills with industry-focused
+                training, practical projects and career guidance.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#courses" class="btn primary-btn">Explore Courses</a>
+                <a href="#contact" class="btn secondary-btn">Contact Us</a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="circle">KA</div>
+
+            <h2>Build Your Career</h2>
+
+            <p>
+                Learn skills that help you become
+                job-ready and industry-ready.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Stats -->
+    <section class="stats">
+
+        <div>
+            <h2>10+</h2>
+            <p>Career Programs</p>
+        </div>
+
+        <div>
+            <h2>1000+</h2>
+            <p>Students Trained</p>
+        </div>
+
+        <div>
+            <h2>50+</h2>
+            <p>Industry Projects</p>
+        </div>
+
+        <div>
+            <h2>24/7</h2>
+            <p>Learning Support</p>
+        </div>
+
+    </section>
+
+
+    <!-- Courses -->
+    <section id="courses" class="section">
+
+        <p class="section-title">OUR PROGRAMS</p>
+
+        <h2 class="section-heading">
+            Learn Skills That Matter
+        </h2>
+
+        <p class="section-description">
+            Choose a technology and start building your career.
+        </p>
+
+
+        <div class="course-container">
+
+            <div class="course-card">
+                <div class="course-icon">☕</div>
+                <h3>Java Full Stack</h3>
+                <p>
+                    Learn Core Java, Spring Boot, databases,
+                    REST APIs and frontend technologies.
+                </p>
+                <button onclick="showMessage('Java Full Stack')">
+                    Learn More
+                </button>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>
+                    Build modern and responsive websites
+                    using HTML, CSS and JavaScript.
+                </p>
+                <button onclick="showMessage('Web Development')">
+                    Learn More
+                </button>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">☁️</div>
+                <h3>Cloud & DevOps</h3>
+                <p>
+                    Understand cloud technologies,
+                    deployment and modern DevOps practices.
+                </p>
+                <button onclick="showMessage('Cloud & DevOps')">
+                    Learn More
+                </button>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">📊</div>
+                <h3>Data & AI</h3>
+                <p>
+                    Explore Python, data analysis,
+                    machine learning and AI concepts.
+                </p>
+                <button onclick="showMessage('Data & AI')">
+                    Learn More
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about-section">
+
+        <div class="about-image">
+            <div class="about-box">
+                <span>KA</span>
+            </div>
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-title">ABOUT US</p>
+
+            <h2>
+                Your Learning Journey
+                Starts Here.
+            </h2>
+
+            <p>
+                Kiran Academy focuses on practical,
+                technology-driven learning. Our programs
+                help students understand concepts,
+                work on projects and prepare for
+                real-world opportunities.
+            </p>
+
+            <div class="features">
+
+                <div>
+                    ✓ Practical Learning
+                </div>
+
+                <div>
+                    ✓ Industry Projects
+                </div>
+
+                <div>
+                    ✓ Career Guidance
+                </div>
+
+                <div>
+                    ✓ Skill Development
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <h2>Ready to Start Learning?</h2>
+
+        <p>
+            Take the first step towards your technology career.
+        </p>
+
+        <a href="#contact" class="btn primary-btn">
+            Get Started
+        </a>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+
+        <p class="section-title">CONTACT US</p>
+
+        <h2 class="section-heading">
+            Let's Connect
+        </h2>
+
+        <div class="contact-container">
+
+            <form onsubmit="submitForm(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    placeholder="Your Phone Number"
+                    required
+                >
+
+                <textarea
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn primary-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+
+            <div class="contact-info">
+
+                <h3>Kiran Academy</h3>
+
+                <p>📍 Maharashtra, India</p>
+
+                <p>📧 info@kiranacademy.com</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>
+                    Build your skills.
+                    Build your future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            <span>KIRAN</span> ACADEMY
+        </div>
+
+        <p>
+            © 2026 Kiran Academy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
